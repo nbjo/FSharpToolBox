@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{29D5A6DA-AEDD-4EE5-B182-5A343DEBD4F2}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpToolBoxLib", "src\Lib\FSharpToolBoxLib.fsproj", "{35223338-E85D-4E56-AC1D-549E8F15AE60}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpToolBox", "src\FSharpToolBox\FSharpToolBox.fsproj", "{3A42A020-630C-45C4-B597-FDB59FB15AF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35223338-E85D-4E56-AC1D-549E8F15AE60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35223338-E85D-4E56-AC1D-549E8F15AE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35223338-E85D-4E56-AC1D-549E8F15AE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35223338-E85D-4E56-AC1D-549E8F15AE60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A42A020-630C-45C4-B597-FDB59FB15AF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A42A020-630C-45C4-B597-FDB59FB15AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A42A020-630C-45C4-B597-FDB59FB15AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A42A020-630C-45C4-B597-FDB59FB15AF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{35223338-E85D-4E56-AC1D-549E8F15AE60} = {29D5A6DA-AEDD-4EE5-B182-5A343DEBD4F2}
+		{3A42A020-630C-45C4-B597-FDB59FB15AF9} = {29D5A6DA-AEDD-4EE5-B182-5A343DEBD4F2}
+	EndGlobalSection
+EndGlobal
