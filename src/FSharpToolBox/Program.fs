@@ -32,7 +32,7 @@ printfn "FSharpToolBox - Begin explore"
 // Test using FSharpToolBoxLib
 helloLib "Nijo"
 
-let input = { Name = "Peter"; Email = "x@y.com"}
+let input = { Name = "Peter Jensen Peter Jensen Peter Jensen Peter Jensen Peter Jensen"; Email = "x@y.com"}
 
 let resultFromValidation = validate input
 
@@ -45,3 +45,44 @@ let printResult result =
 
 printResult resultFromValidation
 
+let logger = new LoggingBuilder()
+
+let loggedWorkflow =
+    logger
+        {
+        let! x = 42
+        let! y = 43
+        let! z = x + y
+        return z
+        }
+
+let maybe = new MaybeBuilder()
+
+let divideBy bottom top =
+    if bottom = 0
+    then None
+    else Some(top/bottom)
+
+let divideByWorkflow init x y z =
+    maybe
+        {
+            let! a = init |> divideBy x
+            let! b = a |> divideBy y
+            let! c = b |> divideBy z
+            return c
+        }
+
+let good = divideByWorkflow 12 3 2 1
+
+let printDiv (result : option<int>) =
+    match result with
+    | None -> printfn "Failed!"
+    | Some v -> printfn $"result = {v}"
+
+printDiv good
+
+let dictInput = [ (1, "a"); (2, "b") ]
+
+let dict = dictInput |> Map.ofList
+
+let xx = 42
